@@ -8,7 +8,7 @@ namespace _01.SumMatrixElements
         public static void Main()
         {
             var input = Console.ReadLine()
-                .Split(',', StringSplitOptions.RemoveEmptyEntries)
+                .Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse).ToArray();
 
             var rows = input[0];
@@ -19,7 +19,7 @@ namespace _01.SumMatrixElements
             for (int i = 0; i < rows; i++)
             {
                 var elements = Console.ReadLine()
-                    .Split(',', StringSplitOptions.RemoveEmptyEntries)
+                    .Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
                     .Select(int.Parse).ToArray();
                 matrix[i] = new int[elements.Length];
                 for (int j = 0; j < cols; j++)
